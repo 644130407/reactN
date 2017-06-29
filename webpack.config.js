@@ -9,5 +9,14 @@ module.exports = {
         path: path.resolve(__dirname, 'dist/asserts'),
         publicPath: "asserts"
 
-    }
+    },
+    plugins: [
+        new webpack.HotMoudleReplacementPlugin(),
+        new HtmlWebpackPlugin(
+            {
+                filename: "index.html",
+                template: "./src/index.html"
+            }
+        )
+    ]
 }
